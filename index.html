@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Pembelajaran</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #4facfe;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #007bff;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Login Siswa</h2>
+
+    <select id="nama">
+        <option value="andi">Andi</option>
+        <option value="budi">Budi</option>
+        <option value="citra">Citra</option>
+    </select>
+
+    <input type="password" id="password" placeholder="Masukkan Password">
+
+    <button onclick="login()">Login</button>
+
+    <p class="error" id="pesan"></p>
+</div>
+
+<script>
+function login() {
+    var nama = document.getElementById("nama").value;
+    var password = document.getElementById("password").value;
+
+    if (nama === "andi" && password === "1234") {
+        window.location.href = "https://syalalal.my.canva.site/"
+    } 
+    else if (nama === "budi" && password === "5678") {
+        window.location.href = "https://syalalal.my.canva.site/"
+    }
+    else if (nama === "citra" && password === "9999") {
+        window.location.href = "https://syalalal.my.canva.site/"
+    }
+    else {
+        document.getElementById("pesan").innerText = "Nama atau password salah!";
+    }
+}
+</script>
+
+</body>
+</html>
